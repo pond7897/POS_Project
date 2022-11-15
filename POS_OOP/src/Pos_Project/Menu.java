@@ -128,7 +128,7 @@ public class Menu extends JFrame {
 		
 		table = new JTable();
 		table.setRowMargin(0);
-		table.setFont(new Font("Kanit", Font.PLAIN, 11));
+		table.setFont(new Font("Kanit", Font.PLAIN, 15));
 		table.setModel(new DefaultTableModel(
 			new Object [][] {
 
@@ -139,91 +139,8 @@ public class Menu extends JFrame {
 		));
 		scrollPane.setViewportView(table);
 		
-		table.getColumnModel().getColumn(0).setPreferredWidth(90);
-		table.getColumnModel().getColumn(1).setPreferredWidth(200);
-		
-		JPanel Choos_Cha = new JPanel();
-		Choos_Cha.setBounds(0, 0, 675, 531);
-		panel_SubMenu.add(Choos_Cha);
-		Choos_Cha.setLayout(null);
-		
-		JLabel TextMilkTea = new JLabel("ชานม");
-		TextMilkTea.setHorizontalAlignment(SwingConstants.CENTER);
-		TextMilkTea.setFont(new Font("Kanit", Font.PLAIN, 14));
-		TextMilkTea.setBounds(41, 251, 170, 29);
-		Choos_Cha.add(TextMilkTea);
-		
-		JLabel TextColdMilk = new JLabel("นมเย็น");
-		TextColdMilk.setHorizontalAlignment(SwingConstants.CENTER);
-		TextColdMilk.setFont(new Font("Kanit", Font.PLAIN, 14));
-		TextColdMilk.setBounds(251, 502, 170, 29);
-		Choos_Cha.add(TextColdMilk);
-		
-		JLabel TextLimeTea = new JLabel("ชามะนาว");
-		TextLimeTea.setHorizontalAlignment(SwingConstants.CENTER);
-		TextLimeTea.setFont(new Font("Kanit", Font.PLAIN, 14));
-		TextLimeTea.setBounds(459, 251, 170, 29);
-		Choos_Cha.add(TextLimeTea);
-		
-		JLabel TextColdTea = new JLabel("ชาเย็น");
-		TextColdTea.setHorizontalAlignment(SwingConstants.CENTER);
-		TextColdTea.setFont(new Font("Kanit", Font.PLAIN, 14));
-		TextColdTea.setBounds(41, 502, 170, 29);
-		Choos_Cha.add(TextColdTea);
-		
-		JLabel TextCocho = new JLabel("โกโก้");
-		TextCocho.setHorizontalAlignment(SwingConstants.CENTER);
-		TextCocho.setFont(new Font("Kanit", Font.PLAIN, 14));
-		TextCocho.setBounds(459, 502, 170, 29);
-		Choos_Cha.add(TextCocho);
-		
-		JLabel TextGreenTea = new JLabel("ชาเขียว");
-		TextGreenTea.setHorizontalAlignment(SwingConstants.CENTER);
-		TextGreenTea.setFont(new Font("Kanit", Font.PLAIN, 14));
-		TextGreenTea.setBounds(251, 251, 170, 29);
-		Choos_Cha.add(TextGreenTea);
-		
-		JButton btnMilkTea = new JButton("");
-		btnMilkTea.setIcon(new ImageIcon(Menu.class.getResource("/resources/image_item/Cha/milkTea.png")));
-		btnMilkTea.setVerticalAlignment(SwingConstants.CENTER);
-		btnMilkTea.setFont(new Font("Kanit", Font.PLAIN, 14));
-		btnMilkTea.setBounds(41, 30, 170, 220);
-		Choos_Cha.add(btnMilkTea);
-		
-		JButton btnGreenTea = new JButton("");
-		btnGreenTea.setIcon(new ImageIcon(Menu.class.getResource("/resources/image_item/Cha/greenTea.png")));
-		btnGreenTea.setVerticalAlignment(SwingConstants.CENTER);
-		btnGreenTea.setFont(new Font("Kanit", Font.PLAIN, 14));
-		btnGreenTea.setBounds(251, 30, 170, 220);
-		Choos_Cha.add(btnGreenTea);
-		
-		JButton btnLimeTea = new JButton("");
-		btnLimeTea.setIcon(new ImageIcon(Menu.class.getResource("/resources/image_item/Cha/LimeTea.png")));
-		btnLimeTea.setVerticalAlignment(SwingConstants.CENTER);
-		btnLimeTea.setFont(new Font("Kanit", Font.PLAIN, 14));
-		btnLimeTea.setBounds(459, 30, 170, 220);
-		Choos_Cha.add(btnLimeTea);
-		
-		JButton btnColdTea = new JButton("");
-		btnColdTea.setIcon(new ImageIcon(Menu.class.getResource("/resources/image_item/Cha/ColdTea.png")));
-		btnColdTea.setVerticalAlignment(SwingConstants.CENTER);
-		btnColdTea.setFont(new Font("Kanit", Font.PLAIN, 14));
-		btnColdTea.setBounds(41, 279, 170, 220);
-		Choos_Cha.add(btnColdTea);
-		
-		JButton btnColdMilk = new JButton("");
-		btnColdMilk.setIcon(new ImageIcon(Menu.class.getResource("/resources/image_item/Cha/ColdMilk.png")));
-		btnColdMilk.setVerticalAlignment(SwingConstants.CENTER);
-		btnColdMilk.setFont(new Font("Kanit", Font.PLAIN, 14));
-		btnColdMilk.setBounds(251, 279, 170, 220);
-		Choos_Cha.add(btnColdMilk);
-		
-		JButton btnCocho = new JButton("");
-		btnCocho.setIcon(new ImageIcon(Menu.class.getResource("/resources/image_item/Cha/Cocho.png")));
-		btnCocho.setVerticalAlignment(SwingConstants.CENTER);
-		btnCocho.setFont(new Font("Kanit", Font.PLAIN, 14));
-		btnCocho.setBounds(459, 279, 170, 220);
-		Choos_Cha.add(btnCocho);
+		table.getColumnModel().getColumn(0).setPreferredWidth(400);
+		table.getColumnModel().getColumn(1).setPreferredWidth(50);
 		
 		
 	
@@ -234,47 +151,17 @@ public class Menu extends JFrame {
 		panel_SubMenu.add(Choos_Snack);
 		Choos_Snack.setLayout(null);
 		
-		//int i,j;
-			
-		
-		JButton btnMoji_choc = new JButton("");
-		btnMoji_choc.setIcon(new ImageIcon(Menu.class.getResource("/resources/image_item/Snack/modi_choc.png")));
-		
-		JLabel TextPudding_choc = new JLabel("พุดดิ้งช็อคโกแลต");
-		TextPudding_choc.setHorizontalAlignment(SwingConstants.CENTER);
-		TextPudding_choc.setFont(new Font("Kanit", Font.PLAIN, 14));
-		TextPudding_choc.setBounds(251, 249, 170, 29);
-		Choos_Snack.add(TextPudding_choc);
-		
-		JLabel TextPudding_milk = new JLabel("พุดดิ้งฝอยทองนมสด");
-		TextPudding_milk.setHorizontalAlignment(SwingConstants.CENTER);
-		TextPudding_milk.setFont(new Font("Kanit", Font.PLAIN, 14));
-		TextPudding_milk.setBounds(459, 249, 170, 29);
-		Choos_Snack.add(TextPudding_milk);
-		
-		JLabel TextMoji_GreenTea = new JLabel("โมจิโรลชาเขียว");
-		TextMoji_GreenTea.setHorizontalAlignment(SwingConstants.CENTER);
-		TextMoji_GreenTea.setFont(new Font("Kanit", Font.PLAIN, 14));
-		TextMoji_GreenTea.setBounds(41, 501, 170, 29);
-		Choos_Snack.add(TextMoji_GreenTea);
-		
-		JLabel TextCroissant = new JLabel("ครัวซ็อง");
-		TextCroissant.setHorizontalAlignment(SwingConstants.CENTER);
-		TextCroissant.setFont(new Font("Kanit", Font.PLAIN, 14));
-		TextCroissant.setBounds(251, 501, 170, 29);
-		Choos_Snack.add(TextCroissant);
-		
-		JLabel TextBreadGalic = new JLabel("ปังเนยกระเทียม");
-		TextBreadGalic.setHorizontalAlignment(SwingConstants.CENTER);
-		TextBreadGalic.setFont(new Font("Kanit", Font.PLAIN, 14));
-		TextBreadGalic.setBounds(459, 501, 170, 29);
-		Choos_Snack.add(TextBreadGalic);
-		
 		JLabel TextMoji_choc = new JLabel("โมจิโรลช็อคโกแลต");
 		TextMoji_choc.setFont(new Font("Kanit", Font.PLAIN, 14));
 		TextMoji_choc.setHorizontalAlignment(SwingConstants.CENTER);
 		TextMoji_choc.setBounds(41, 249, 170, 29);
 		Choos_Snack.add(TextMoji_choc);
+		
+		//int i,j;
+			
+		
+		JButton btnMoji_choc = new JButton("");
+		btnMoji_choc.setIcon(new ImageIcon(Menu.class.getResource("/resources/image_item/Snack/modi_choc.png")));
 		btnMoji_choc.setFont(new Font("Kanit", Font.PLAIN, 14));
 		btnMoji_choc.setBounds(41, 30, 170, 220);
 		Choos_Snack.add(btnMoji_choc);
@@ -291,6 +178,12 @@ public class Menu extends JFrame {
 			}
 		});
 		
+		JLabel TextPudding_choc = new JLabel("พุดดิ้งช็อคโกแลต");
+		TextPudding_choc.setHorizontalAlignment(SwingConstants.CENTER);
+		TextPudding_choc.setFont(new Font("Kanit", Font.PLAIN, 14));
+		TextPudding_choc.setBounds(251, 249, 170, 29);
+		Choos_Snack.add(TextPudding_choc);
+		
 		JButton btnPudding_choc = new JButton("");
 		btnPudding_choc.setIcon(new ImageIcon(Menu.class.getResource("/resources/image_item/Snack//Pudding_choc.png")));
 		btnPudding_choc.addActionListener(new ActionListener() {
@@ -305,6 +198,12 @@ public class Menu extends JFrame {
 		btnPudding_choc.setBounds(251, 30, 170, 220);
 		Choos_Snack.add(btnPudding_choc);
 		
+		JLabel TextPudding_milk = new JLabel("พุดดิ้งฝอยทองนมสด");
+		TextPudding_milk.setHorizontalAlignment(SwingConstants.CENTER);
+		TextPudding_milk.setFont(new Font("Kanit", Font.PLAIN, 14));
+		TextPudding_milk.setBounds(459, 249, 170, 29);
+		Choos_Snack.add(TextPudding_milk);
+		
 		JButton btnPudding_milk = new JButton("");
 		btnPudding_milk.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -318,6 +217,12 @@ public class Menu extends JFrame {
 		btnPudding_milk.setFont(new Font("Kanit", Font.PLAIN, 14));
 		btnPudding_milk.setBounds(459, 30, 170, 220);
 		Choos_Snack.add(btnPudding_milk);
+		
+		JLabel TextMoji_GreenTea = new JLabel("โมจิโรลชาเขียว");
+		TextMoji_GreenTea.setHorizontalAlignment(SwingConstants.CENTER);
+		TextMoji_GreenTea.setFont(new Font("Kanit", Font.PLAIN, 14));
+		TextMoji_GreenTea.setBounds(41, 501, 170, 29);
+		Choos_Snack.add(TextMoji_GreenTea);
 		
 		JButton btnMoji_GreenTea = new JButton("");
 		btnMoji_GreenTea.addActionListener(new ActionListener() {
@@ -334,6 +239,12 @@ public class Menu extends JFrame {
 		btnMoji_GreenTea.setBounds(41, 279, 170, 220);
 		Choos_Snack.add(btnMoji_GreenTea);
 		
+		JLabel TextCroissant = new JLabel("ครัวซ็อง");
+		TextCroissant.setHorizontalAlignment(SwingConstants.CENTER);
+		TextCroissant.setFont(new Font("Kanit", Font.PLAIN, 14));
+		TextCroissant.setBounds(251, 501, 170, 29);
+		Choos_Snack.add(TextCroissant);
+		
 		JButton btnCroissant = new JButton("");
 		btnCroissant.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -347,6 +258,12 @@ public class Menu extends JFrame {
 		btnCroissant.setFont(new Font("Kanit", Font.PLAIN, 14));
 		btnCroissant.setBounds(251, 279, 170, 220);
 		Choos_Snack.add(btnCroissant);
+		
+		JLabel TextBreadGalic = new JLabel("ปังเนยกระเทียม");
+		TextBreadGalic.setHorizontalAlignment(SwingConstants.CENTER);
+		TextBreadGalic.setFont(new Font("Kanit", Font.PLAIN, 14));
+		TextBreadGalic.setBounds(459, 501, 170, 29);
+		Choos_Snack.add(TextBreadGalic);
 		
 		JButton btnBreadGalic = new JButton("");
 		btnBreadGalic.addActionListener(new ActionListener() {
@@ -362,10 +279,162 @@ public class Menu extends JFrame {
 		btnBreadGalic.setBounds(459, 279, 170, 220);
 		Choos_Snack.add(btnBreadGalic);
 		
+		JPanel Choos_Cha = new JPanel();
+		Choos_Cha.setBounds(0, 0, 675, 531);
+		panel_SubMenu.add(Choos_Cha);
+		Choos_Cha.setLayout(null);
+		
+		JLabel TextMilkTea = new JLabel("ชานม");
+		TextMilkTea.setHorizontalAlignment(SwingConstants.CENTER);
+		TextMilkTea.setFont(new Font("Kanit", Font.PLAIN, 14));
+		TextMilkTea.setBounds(41, 251, 170, 29);
+		Choos_Cha.add(TextMilkTea);
+		
+		JButton btnMilkTea = new JButton("");
+		btnMilkTea.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				int Acount = count[6];
+				++Acount;
+				++count[6];
+				addtable(TextMilkTea.getText(),Acount,35);
+			}
+		});
+		btnMilkTea.setIcon(new ImageIcon(Menu.class.getResource("/resources/image_item/Cha/milkTea.png")));
+		btnMilkTea.setVerticalAlignment(SwingConstants.CENTER);
+		btnMilkTea.setFont(new Font("Kanit", Font.PLAIN, 14));
+		btnMilkTea.setBounds(41, 30, 170, 220);
+		Choos_Cha.add(btnMilkTea);
+		
+		JLabel TextGreenTea = new JLabel("ชาเขียว");
+		TextGreenTea.setHorizontalAlignment(SwingConstants.CENTER);
+		TextGreenTea.setFont(new Font("Kanit", Font.PLAIN, 14));
+		TextGreenTea.setBounds(251, 251, 170, 29);
+		Choos_Cha.add(TextGreenTea);
+		
+		JButton btnGreenTea = new JButton("");
+		btnGreenTea.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				int Acount = count[7];
+				++Acount;
+				++count[7];
+				addtable(TextGreenTea.getText(),Acount,35);
+			}
+		});
+		btnGreenTea.setIcon(new ImageIcon(Menu.class.getResource("/resources/image_item/Cha/greenTea.png")));
+		btnGreenTea.setVerticalAlignment(SwingConstants.CENTER);
+		btnGreenTea.setFont(new Font("Kanit", Font.PLAIN, 14));
+		btnGreenTea.setBounds(251, 30, 170, 220);
+		Choos_Cha.add(btnGreenTea);
+		
+		JLabel TextLimeTea = new JLabel("ชามะนาว");
+		TextLimeTea.setHorizontalAlignment(SwingConstants.CENTER);
+		TextLimeTea.setFont(new Font("Kanit", Font.PLAIN, 14));
+		TextLimeTea.setBounds(459, 251, 170, 29);
+		Choos_Cha.add(TextLimeTea);
+		
+		JButton btnLimeTea = new JButton("");
+		btnLimeTea.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				int Acount = count[8];
+				++Acount;
+				++count[8];
+				addtable(TextLimeTea.getText(),Acount,35);
+			}
+		});
+		btnLimeTea.setIcon(new ImageIcon(Menu.class.getResource("/resources/image_item/Cha/LimeTea.png")));
+		btnLimeTea.setVerticalAlignment(SwingConstants.CENTER);
+		btnLimeTea.setFont(new Font("Kanit", Font.PLAIN, 14));
+		btnLimeTea.setBounds(459, 30, 170, 220);
+		Choos_Cha.add(btnLimeTea);
+		
+		JLabel TextColdTea = new JLabel("ชาเย็น");
+		TextColdTea.setHorizontalAlignment(SwingConstants.CENTER);
+		TextColdTea.setFont(new Font("Kanit", Font.PLAIN, 14));
+		TextColdTea.setBounds(41, 502, 170, 29);
+		Choos_Cha.add(TextColdTea);
+		
+		JButton btnColdTea = new JButton("");
+		btnColdTea.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				int Acount = count[9];
+				++Acount;
+				++count[9];
+				addtable(TextColdTea.getText(),Acount,35);
+			}
+		});
+		btnColdTea.setIcon(new ImageIcon(Menu.class.getResource("/resources/image_item/Cha/ColdTea.png")));
+		btnColdTea.setVerticalAlignment(SwingConstants.CENTER);
+		btnColdTea.setFont(new Font("Kanit", Font.PLAIN, 14));
+		btnColdTea.setBounds(41, 279, 170, 220);
+		Choos_Cha.add(btnColdTea);
+		
+		JLabel TextColdMilk = new JLabel("นมเย็น");
+		TextColdMilk.setHorizontalAlignment(SwingConstants.CENTER);
+		TextColdMilk.setFont(new Font("Kanit", Font.PLAIN, 14));
+		TextColdMilk.setBounds(251, 502, 170, 29);
+		Choos_Cha.add(TextColdMilk);
+		
+		JButton btnColdMilk = new JButton("");
+		btnColdMilk.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				int Acount = count[10];
+				++Acount;
+				++count[10];
+				addtable(TextColdMilk.getText(),Acount,35);
+			}
+		});
+		btnColdMilk.setIcon(new ImageIcon(Menu.class.getResource("/resources/image_item/Cha/ColdMilk.png")));
+		btnColdMilk.setVerticalAlignment(SwingConstants.CENTER);
+		btnColdMilk.setFont(new Font("Kanit", Font.PLAIN, 14));
+		btnColdMilk.setBounds(251, 279, 170, 220);
+		Choos_Cha.add(btnColdMilk);
+		
+		JLabel TextCocho = new JLabel("โกโก้");
+		TextCocho.setHorizontalAlignment(SwingConstants.CENTER);
+		TextCocho.setFont(new Font("Kanit", Font.PLAIN, 14));
+		TextCocho.setBounds(459, 502, 170, 29);
+		Choos_Cha.add(TextCocho);
+		
+		JButton btnCocho = new JButton("");
+		btnCocho.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				int Acount = count[11];
+				++Acount;
+				++count[11];
+				addtable(TextCocho.getText(),Acount,35);
+			}
+		});
+		btnCocho.setIcon(new ImageIcon(Menu.class.getResource("/resources/image_item/Cha/Cocho.png")));
+		btnCocho.setVerticalAlignment(SwingConstants.CENTER);
+		btnCocho.setFont(new Font("Kanit", Font.PLAIN, 14));
+		btnCocho.setBounds(459, 279, 170, 220);
+		Choos_Cha.add(btnCocho);
+		
 		JPanel Choos_cafe = new JPanel();
 		Choos_cafe.setBounds(0, 0, 675, 531);
 		panel_SubMenu.add(Choos_cafe);
 		Choos_cafe.setLayout(null);
+		
+		JLabel TextAmericano = new JLabel("อเมริกาโน่");
+		TextAmericano.setHorizontalAlignment(SwingConstants.CENTER);
+		TextAmericano.setFont(new Font("Kanit", Font.PLAIN, 14));
+		TextAmericano.setBounds(41, 250, 170, 29);
+		Choos_cafe.add(TextAmericano);
+		
+		JButton btnAmericano = new JButton("");
+		btnAmericano.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				int Acount = count[12];
+				++Acount;
+				++count[12];
+				addtable(TextAmericano.getText(),Acount,35);
+			}
+		});
+		btnAmericano.setIcon(new ImageIcon(Menu.class.getResource("/resources/image_item/Cafe/Americano.png")));
+		btnAmericano.setVerticalAlignment(SwingConstants.CENTER);
+		btnAmericano.setFont(new Font("Kanit", Font.PLAIN, 14));
+		btnAmericano.setBounds(41, 30, 170, 220);
+		Choos_cafe.add(btnAmericano);
 		
 		JLabel TextCapucino = new JLabel("คาปูชิโน่");
 		TextCapucino.setHorizontalAlignment(SwingConstants.CENTER);
@@ -374,24 +443,40 @@ public class Menu extends JFrame {
 		Choos_cafe.add(TextCapucino);
 		
 		JButton btnCapucino = new JButton("");
+		btnCapucino.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				int Acount = count[13];
+				++Acount;
+				++count[13];
+				addtable(TextCapucino.getText(),Acount,35);
+			}
+		});
 		btnCapucino.setIcon(new ImageIcon(Menu.class.getResource("/resources/image_item/Cafe/Capucino.png")));
 		btnCapucino.setVerticalAlignment(SwingConstants.CENTER);
 		btnCapucino.setFont(new Font("Kanit", Font.PLAIN, 14));
 		btnCapucino.setBounds(251, 30, 170, 220);
 		Choos_cafe.add(btnCapucino);
 		
-		JLabel TextBlackTea = new JLabel("กาแฟดำ");
-		TextBlackTea.setHorizontalAlignment(SwingConstants.CENTER);
-		TextBlackTea.setFont(new Font("Kanit", Font.PLAIN, 14));
-		TextBlackTea.setBounds(459, 502, 170, 29);
-		Choos_cafe.add(TextBlackTea);
+		JLabel TextEspresso = new JLabel("เอสเปรสโซ่");
+		TextEspresso.setHorizontalAlignment(SwingConstants.CENTER);
+		TextEspresso.setFont(new Font("Kanit", Font.PLAIN, 14));
+		TextEspresso.setBounds(459, 250, 170, 29);
+		Choos_cafe.add(TextEspresso);
 		
-		JButton btnBlackTea = new JButton("");
-		btnBlackTea.setIcon(new ImageIcon(Menu.class.getResource("/resources/image_item/Cafe/BlackTea.png")));
-		btnBlackTea.setVerticalAlignment(SwingConstants.CENTER);
-		btnBlackTea.setFont(new Font("Kanit", Font.PLAIN, 14));
-		btnBlackTea.setBounds(459, 279, 170, 220);
-		Choos_cafe.add(btnBlackTea);
+		JButton btnEspresso = new JButton("");
+		btnEspresso.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				int Acount = count[14];
+				++Acount;
+				++count[14];
+				addtable(TextEspresso.getText(),Acount,35);
+			}
+		});
+		btnEspresso.setIcon(new ImageIcon(Menu.class.getResource("/resources/image_item/Cafe/Esspressso.png")));
+		btnEspresso.setVerticalAlignment(SwingConstants.CENTER);
+		btnEspresso.setFont(new Font("Kanit", Font.PLAIN, 14));
+		btnEspresso.setBounds(459, 30, 170, 220);
+		Choos_cafe.add(btnEspresso);
 		
 		JLabel TextLate = new JLabel("ลาเต้");
 		TextLate.setHorizontalAlignment(SwingConstants.CENTER);
@@ -400,6 +485,14 @@ public class Menu extends JFrame {
 		Choos_cafe.add(TextLate);
 		
 		JButton btnLate = new JButton("");
+		btnLate.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				int Acount = count[15];
+				++Acount;
+				++count[15];
+				addtable(TextLate.getText(),Acount,35);
+			}
+		});
 		btnLate.setIcon(new ImageIcon(Menu.class.getResource("/resources/image_item/Cafe/Late.png")));
 		btnLate.setVerticalAlignment(SwingConstants.CENTER);
 		btnLate.setFont(new Font("Kanit", Font.PLAIN, 14));
@@ -413,37 +506,40 @@ public class Menu extends JFrame {
 		Choos_cafe.add(TextMocha);
 		
 		JButton btnMocha = new JButton("");
+		btnMocha.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				int Acount = count[16];
+				++Acount;
+				++count[16];
+				addtable(TextMocha.getText(),Acount,35);
+			}
+		});
 		btnMocha.setIcon(new ImageIcon(Menu.class.getResource("/resources/image_item/Cafe/Mocha.png")));
 		btnMocha.setVerticalAlignment(SwingConstants.CENTER);
 		btnMocha.setFont(new Font("Kanit", Font.PLAIN, 14));
 		btnMocha.setBounds(251, 279, 170, 220);
 		Choos_cafe.add(btnMocha);
 		
-		JLabel TextEsspresso = new JLabel("เอสเปรสโซ่");
-		TextEsspresso.setHorizontalAlignment(SwingConstants.CENTER);
-		TextEsspresso.setFont(new Font("Kanit", Font.PLAIN, 14));
-		TextEsspresso.setBounds(459, 250, 170, 29);
-		Choos_cafe.add(TextEsspresso);
+		JLabel TextBlackTea = new JLabel("กาแฟดำ");
+		TextBlackTea.setHorizontalAlignment(SwingConstants.CENTER);
+		TextBlackTea.setFont(new Font("Kanit", Font.PLAIN, 14));
+		TextBlackTea.setBounds(459, 502, 170, 29);
+		Choos_cafe.add(TextBlackTea);
 		
-		JButton btnEspresso = new JButton("");
-		btnEspresso.setIcon(new ImageIcon(Menu.class.getResource("/resources/image_item/Cafe/Esspressso.png")));
-		btnEspresso.setVerticalAlignment(SwingConstants.CENTER);
-		btnEspresso.setFont(new Font("Kanit", Font.PLAIN, 14));
-		btnEspresso.setBounds(459, 30, 170, 220);
-		Choos_cafe.add(btnEspresso);
-		
-		JLabel TextAmericano = new JLabel("อเมริกาโน่");
-		TextAmericano.setHorizontalAlignment(SwingConstants.CENTER);
-		TextAmericano.setFont(new Font("Kanit", Font.PLAIN, 14));
-		TextAmericano.setBounds(41, 250, 170, 29);
-		Choos_cafe.add(TextAmericano);
-		
-		JButton btnAmericano = new JButton("");
-		btnAmericano.setIcon(new ImageIcon(Menu.class.getResource("/resources/image_item/Cafe/Americano.png")));
-		btnAmericano.setVerticalAlignment(SwingConstants.CENTER);
-		btnAmericano.setFont(new Font("Kanit", Font.PLAIN, 14));
-		btnAmericano.setBounds(41, 30, 170, 220);
-		Choos_cafe.add(btnAmericano);
+		JButton btnBlackTea = new JButton("");
+		btnBlackTea.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				int Acount = count[17];
+				++Acount;
+				++count[17];
+				addtable(TextBlackTea.getText(),Acount,35);
+			}
+		});
+		btnBlackTea.setIcon(new ImageIcon(Menu.class.getResource("/resources/image_item/Cafe/BlackTea.png")));
+		btnBlackTea.setVerticalAlignment(SwingConstants.CENTER);
+		btnBlackTea.setFont(new Font("Kanit", Font.PLAIN, 14));
+		btnBlackTea.setBounds(459, 279, 170, 220);
+		Choos_cafe.add(btnBlackTea);
 		
 		//
 		
