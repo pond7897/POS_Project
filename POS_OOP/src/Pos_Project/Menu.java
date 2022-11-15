@@ -32,7 +32,8 @@ public class Menu extends JFrame {
 	protected JFrame Menuframe;
 	protected JLayeredPane panel_SubMenu;
 	private JTable table;
-	private int TotalPrice = 132456;
+	private String TotalPrice;
+	private JLabel Total_PriceNumber;
 
 
 	/**
@@ -139,7 +140,7 @@ public class Menu extends JFrame {
 		));
 		scrollPane.setViewportView(table);
 		
-		table.getColumnModel().getColumn(0).setPreferredWidth(400);
+		table.getColumnModel().getColumn(0).setPreferredWidth(200);
 		table.getColumnModel().getColumn(1).setPreferredWidth(50);
 		
 		
@@ -172,6 +173,7 @@ public class Menu extends JFrame {
 				++Acount;
 				++count[0];
 				addtable(TextMoji_choc.getText(),Acount,20);
+				cal();
 				
 				
 				
@@ -192,6 +194,7 @@ public class Menu extends JFrame {
 				++Acount;
 				++count[1];
 				addtable(TextPudding_choc.getText(),Acount,20);
+				cal();
 			}
 		});
 		btnPudding_choc.setFont(new Font("Kanit", Font.PLAIN, 14));
@@ -211,6 +214,7 @@ public class Menu extends JFrame {
 				++Acount;
 				++count[2];
 				addtable(TextPudding_milk.getText(),Acount,20);
+				cal();
 			}
 		});
 		btnPudding_milk.setIcon(new ImageIcon(Menu.class.getResource("/resources/image_item/Snack//Pudding_gold_milk.png")));
@@ -231,6 +235,7 @@ public class Menu extends JFrame {
 				++Acount;
 				++count[3];
 				addtable(TextMoji_GreenTea.getText(),Acount,20);
+				cal();
 			}
 		});
 		btnMoji_GreenTea.setIcon(new ImageIcon(Menu.class.getResource("/resources/image_item/Snack//Moji_GreenTea.png")));
@@ -252,6 +257,7 @@ public class Menu extends JFrame {
 				++Acount;
 				++count[4];
 				addtable(TextCroissant.getText(),Acount,35);
+				cal();
 			}
 		});
 		btnCroissant.setIcon(new ImageIcon(Menu.class.getResource("/resources/image_item/Snack/Croissant.png")));
@@ -272,6 +278,7 @@ public class Menu extends JFrame {
 				++Acount;
 				++count[5];
 				addtable(TextBreadGalic.getText(),Acount,35);
+				cal();
 			}
 		});
 		btnBreadGalic.setIcon(new ImageIcon(Menu.class.getResource("/resources/image_item/Snack/BreadGalic.png")));
@@ -297,6 +304,7 @@ public class Menu extends JFrame {
 				++Acount;
 				++count[6];
 				addtable(TextMilkTea.getText(),Acount,35);
+				cal();
 			}
 		});
 		btnMilkTea.setIcon(new ImageIcon(Menu.class.getResource("/resources/image_item/Cha/milkTea.png")));
@@ -318,6 +326,7 @@ public class Menu extends JFrame {
 				++Acount;
 				++count[7];
 				addtable(TextGreenTea.getText(),Acount,35);
+				cal();
 			}
 		});
 		btnGreenTea.setIcon(new ImageIcon(Menu.class.getResource("/resources/image_item/Cha/greenTea.png")));
@@ -339,6 +348,7 @@ public class Menu extends JFrame {
 				++Acount;
 				++count[8];
 				addtable(TextLimeTea.getText(),Acount,35);
+				cal();
 			}
 		});
 		btnLimeTea.setIcon(new ImageIcon(Menu.class.getResource("/resources/image_item/Cha/LimeTea.png")));
@@ -360,6 +370,7 @@ public class Menu extends JFrame {
 				++Acount;
 				++count[9];
 				addtable(TextColdTea.getText(),Acount,35);
+				cal();
 			}
 		});
 		btnColdTea.setIcon(new ImageIcon(Menu.class.getResource("/resources/image_item/Cha/ColdTea.png")));
@@ -381,6 +392,7 @@ public class Menu extends JFrame {
 				++Acount;
 				++count[10];
 				addtable(TextColdMilk.getText(),Acount,35);
+				cal();
 			}
 		});
 		btnColdMilk.setIcon(new ImageIcon(Menu.class.getResource("/resources/image_item/Cha/ColdMilk.png")));
@@ -402,6 +414,7 @@ public class Menu extends JFrame {
 				++Acount;
 				++count[11];
 				addtable(TextCocho.getText(),Acount,35);
+				cal();
 			}
 		});
 		btnCocho.setIcon(new ImageIcon(Menu.class.getResource("/resources/image_item/Cha/Cocho.png")));
@@ -428,6 +441,7 @@ public class Menu extends JFrame {
 				++Acount;
 				++count[12];
 				addtable(TextAmericano.getText(),Acount,35);
+				cal();
 			}
 		});
 		btnAmericano.setIcon(new ImageIcon(Menu.class.getResource("/resources/image_item/Cafe/Americano.png")));
@@ -449,6 +463,7 @@ public class Menu extends JFrame {
 				++Acount;
 				++count[13];
 				addtable(TextCapucino.getText(),Acount,35);
+				cal();
 			}
 		});
 		btnCapucino.setIcon(new ImageIcon(Menu.class.getResource("/resources/image_item/Cafe/Capucino.png")));
@@ -470,6 +485,7 @@ public class Menu extends JFrame {
 				++Acount;
 				++count[14];
 				addtable(TextEspresso.getText(),Acount,35);
+				cal();
 			}
 		});
 		btnEspresso.setIcon(new ImageIcon(Menu.class.getResource("/resources/image_item/Cafe/Esspressso.png")));
@@ -491,6 +507,7 @@ public class Menu extends JFrame {
 				++Acount;
 				++count[15];
 				addtable(TextLate.getText(),Acount,35);
+				cal();
 			}
 		});
 		btnLate.setIcon(new ImageIcon(Menu.class.getResource("/resources/image_item/Cafe/Late.png")));
@@ -512,6 +529,7 @@ public class Menu extends JFrame {
 				++Acount;
 				++count[16];
 				addtable(TextMocha.getText(),Acount,35);
+				cal();
 			}
 		});
 		btnMocha.setIcon(new ImageIcon(Menu.class.getResource("/resources/image_item/Cafe/Mocha.png")));
@@ -533,6 +551,7 @@ public class Menu extends JFrame {
 				++Acount;
 				++count[17];
 				addtable(TextBlackTea.getText(),Acount,35);
+				cal();
 			}
 		});
 		btnBlackTea.setIcon(new ImageIcon(Menu.class.getResource("/resources/image_item/Cafe/BlackTea.png")));
@@ -561,8 +580,8 @@ public class Menu extends JFrame {
 		Menuframe.getContentPane().add(panel);
 		panel.setLayout(null);
 		
-		JLabel Total_PriceNumber = new JLabel("");
-		Total_PriceNumber.setText(String.valueOf(TotalPrice));
+		Total_PriceNumber = new JLabel("");
+		Total_PriceNumber.setText("0");
 		Total_PriceNumber.setFont(new Font("Kanit", Font.PLAIN, 20));
 		Total_PriceNumber.setHorizontalAlignment(SwingConstants.LEFT);
 		Total_PriceNumber.setBounds(122, 0, 226, 39);
@@ -612,37 +631,49 @@ public class Menu extends JFrame {
 	
 	public void addtable(String Pd, int qty, int price) {
 		DefaultTableModel dt = (DefaultTableModel) table.getModel();
+	       
 		
-		for (int row = 0; row < table.getRowCount(); row++) {
+		double totPrice = price * Double.valueOf(qty) ;
+		DecimalFormat df = new DecimalFormat("0") ;
+	    TotalPrice = df.format(totPrice);
+		
+	    
+	    for (int row = 0; row < table.getRowCount(); row++) {
 			if (Pd == table.getValueAt(row, 0)) {
 				dt.removeRow(table.convertRowIndexToModel(row));
 			}
 		}
+		
+		
 		Vector v = new Vector();
 		
 		v.add(Pd);
 		v.add(qty);
-		v.add(price);
+		v.add(TotalPrice);
 		
 		dt.addRow(v);
 		
 }
-	 public void cal(){
+	   public void cal(){
 		    //cal total table values
 		   
 		   int numOfRow = table.getRowCount() ;
-		   double tot = 0.0 ;
+		   int tot = 0 ;
 		   
 		       for (int i = 0; i < numOfRow; i++) {
 		           
-		           double value = Double.valueOf(table.getValueAt(i, 3).toString());
+		           double value = Double.valueOf(table.getValueAt(i, 2).toString());
 		          
 		           tot += value ;
 		           
 		       }
-		    } 
-	
-	
+		       
+		       DecimalFormat df = new DecimalFormat("0") ;
+		       Total_PriceNumber.setText(df.format(tot));
+		    
+		   
+		   
+		   } 
 	public void switchPanels(JPanel panel) {
 		panel_SubMenu.removeAll();
 		panel_SubMenu.add(panel);
@@ -650,10 +681,10 @@ public class Menu extends JFrame {
 		panel_SubMenu.revalidate();
 		
 	}
-	public int getTotal() {
-		return TotalPrice;
+	public String getTotal() {
+		return String.valueOf(Total_PriceNumber);
 	}
-	public void setTotal(int Total) {
-		this.TotalPrice = Total;
+	public void setTotal(JLabel Total) {
+		Total_PriceNumber = Total;
 	}
 }
