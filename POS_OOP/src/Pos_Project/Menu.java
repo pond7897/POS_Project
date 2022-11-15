@@ -669,7 +669,7 @@ public class Menu extends JFrame {
 		           
 		       }
 		       
-		       DecimalFormat df = new DecimalFormat("#,###") ;
+		       DecimalFormat df = new DecimalFormat("0") ;
 		       Total_PriceNumber.setText(df.format(tot));
 		    
 		   } 
