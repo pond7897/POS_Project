@@ -1,7 +1,6 @@
 package Pos_Project;
 
 
-import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -13,7 +12,6 @@ import javax.swing.SwingConstants;
 import java.awt.Font;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.lang.reflect.Array;
 import java.text.DecimalFormat;
 import java.util.Vector;
 import java.awt.Dimension;
@@ -213,7 +211,7 @@ public class Menu extends JFrame {
 				int Acount = count[2];
 				++Acount;
 				++count[2];
-				addtable(TextPudding_milk.getText(),Acount,20);
+				addtable(TextPudding_milk.getText(),Acount,35);
 				cal();
 			}
 		});
@@ -256,7 +254,7 @@ public class Menu extends JFrame {
 				int Acount = count[4];
 				++Acount;
 				++count[4];
-				addtable(TextCroissant.getText(),Acount,35);
+				addtable(TextCroissant.getText(),Acount,20);
 				cal();
 			}
 		});
@@ -277,7 +275,7 @@ public class Menu extends JFrame {
 				int Acount = count[5];
 				++Acount;
 				++count[5];
-				addtable(TextBreadGalic.getText(),Acount,35);
+				addtable(TextBreadGalic.getText(),Acount,20);
 				cal();
 			}
 		});
@@ -550,7 +548,7 @@ public class Menu extends JFrame {
 				int Acount = count[17];
 				++Acount;
 				++count[17];
-				addtable(TextBlackTea.getText(),Acount,10000);
+				addtable(TextBlackTea.getText(),Acount,35);
 				cal();
 			}
 		});
@@ -562,7 +560,8 @@ public class Menu extends JFrame {
 		
 		//
 		
-		JButton btnNewButton_1 = new JButton("next");
+		JButton btnNewButton_1 = new JButton("ชำระเงิน");
+		btnNewButton_1.setFont(new Font("Kanit", Font.PLAIN, 20));
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Check_total_page TotalPage = new Check_total_page(Total_PriceNumber);

@@ -1,5 +1,4 @@
 package Pos_Project;
-import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JButton;
@@ -17,7 +16,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.Cursor;
-import javax.swing.border.LineBorder;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.awt.Toolkit;
@@ -60,16 +58,16 @@ public class Login {
 		frmTextshop.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmTextshop.getContentPane().setLayout(null);
 		
-		JLabel Label_User = new JLabel("ชื่อผู้ใช้ : ");
-		Label_User.setFont(new Font("Kanit", Font.PLAIN, 25));
-		Label_User.setBounds(211, 381, 82, 47);
-		frmTextshop.getContentPane().add(Label_User);
-		
 		JLabel Label_Logo = new JLabel("");
 		Label_Logo.setIcon(new ImageIcon(Login.class.getResource("/resources/gonhintest2.jpg")));
 		Label_Logo.setHorizontalAlignment(SwingConstants.CENTER);
 		Label_Logo.setBounds(241, 47, 564, 259);
 		frmTextshop.getContentPane().add(Label_Logo);
+		
+		JLabel Label_User = new JLabel("ชื่อผู้ใช้ : ");
+		Label_User.setFont(new Font("Kanit", Font.PLAIN, 25));
+		Label_User.setBounds(211, 381, 82, 47);
+		frmTextshop.getContentPane().add(Label_User);
 		
 		textFieldUser = new JTextField();
 		textFieldUser.setCursor(Cursor.getPredefinedCursor(Cursor.TEXT_CURSOR));
@@ -78,22 +76,6 @@ public class Login {
 		textFieldUser.setBounds(327, 393, 481, 33);
 		frmTextshop.getContentPane().add(textFieldUser);
 		textFieldUser.setColumns(10);
-		
-		Label_Pass = new JLabel("รหัสผ่าน : ");
-		Label_Pass.setFont(new Font("Kanit", Font.PLAIN, 25));
-		Label_Pass.setBounds(191, 446, 102, 47);
-		frmTextshop.getContentPane().add(Label_Pass);
-		
-		textFieldPass = new JPasswordField();
-		textFieldPass.setFont(new Font("Kanit", Font.PLAIN, 20));
-		textFieldPass.setColumns(10);
-		textFieldPass.setBackground(new Color(248, 225, 231));
-		textFieldPass.setBounds(327, 456, 481, 33);
-		frmTextshop.getContentPane().add(textFieldPass);
-		
-		
-		//Button UserLogin
-		BEnter = new JButton("เข้าสู่ระบบ");
 		textFieldUser.addKeyListener(new KeyAdapter() {
 			@Override
 			public void keyPressed(KeyEvent e) {
@@ -118,6 +100,22 @@ public class Login {
 				}
 			}
 		});
+		
+		Label_Pass = new JLabel("รหัสผ่าน : ");
+		Label_Pass.setFont(new Font("Kanit", Font.PLAIN, 25));
+		Label_Pass.setBounds(191, 446, 102, 47);
+		frmTextshop.getContentPane().add(Label_Pass);
+		
+		textFieldPass = new JPasswordField();
+		textFieldPass.setFont(new Font("Kanit", Font.PLAIN, 20));
+		textFieldPass.setColumns(10);
+		textFieldPass.setBackground(new Color(248, 225, 231));
+		textFieldPass.setBounds(327, 456, 481, 33);
+		frmTextshop.getContentPane().add(textFieldPass);
+		
+		
+		//Button UserLogin
+		BEnter = new JButton("เข้าสู่ระบบ");
 		
 		textFieldPass.addKeyListener(new KeyAdapter() {
 			@Override
