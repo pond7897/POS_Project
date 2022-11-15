@@ -1,4 +1,5 @@
 # POS_Project
-Foobar is a Python library for dealing with word pluralization.
-##
+
+โปรแกรมนี้จัดทำขึ้นเพื่อเป็นโปรเจคจบรายวิชา OOP ของปีที่ 2 คณะวิทยาศาสตร์ สาขาคณิตศาสตร์ประยุกต์
+
 
