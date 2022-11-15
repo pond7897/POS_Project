@@ -33,7 +33,7 @@ public class Menu extends JFrame {
 	protected JLayeredPane panel_SubMenu;
 	private JTable table;
 	private String TotalPrice;
-	private JLabel Total_PriceNumber;
+	public JLabel Total_PriceNumber;
 
 
 	/**
@@ -550,7 +550,7 @@ public class Menu extends JFrame {
 				int Acount = count[17];
 				++Acount;
 				++count[17];
-				addtable(TextBlackTea.getText(),Acount,35);
+				addtable(TextBlackTea.getText(),Acount,10000);
 				cal();
 			}
 		});
@@ -565,7 +565,7 @@ public class Menu extends JFrame {
 		JButton btnNewButton_1 = new JButton("next");
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Check_total_page TotalPage = new Check_total_page();
+				Check_total_page TotalPage = new Check_total_page(Total_PriceNumber);
 				TotalPage.Total_Frame.setVisible(true);
 				Menuframe.dispose();
 				
@@ -592,6 +592,7 @@ public class Menu extends JFrame {
 		Total_Price_1.setFont(new Font("Kanit", Font.PLAIN, 20));
 		Total_Price_1.setBounds(0, 0, 114, 39);
 		panel.add(Total_Price_1);
+		
 		
 		lblNewLabel.addMouseListener(new MouseAdapter() {
 			@Override
@@ -668,11 +669,9 @@ public class Menu extends JFrame {
 		           
 		       }
 		       
-		       DecimalFormat df = new DecimalFormat("0") ;
+		       DecimalFormat df = new DecimalFormat("#,###") ;
 		       Total_PriceNumber.setText(df.format(tot));
 		    
-		   
-		   
 		   } 
 	public void switchPanels(JPanel panel) {
 		panel_SubMenu.removeAll();
@@ -681,10 +680,5 @@ public class Menu extends JFrame {
 		panel_SubMenu.revalidate();
 		
 	}
-	public String getTotal() {
-		return String.valueOf(Total_PriceNumber);
-	}
-	public void setTotal(JLabel Total) {
-		Total_PriceNumber = Total;
-	}
+
 }

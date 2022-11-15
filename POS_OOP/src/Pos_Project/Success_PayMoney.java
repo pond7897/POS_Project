@@ -12,31 +12,20 @@ import javax.swing.JLabel;
 import javax.swing.JButton;
 import javax.swing.ImageIcon;
 import javax.swing.SwingConstants;
+import javax.swing.JTextField;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class Success_PayMoney extends JFrame {
 
 	private JPanel contentPane;
 
 	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Success_PayMoney frame = new Success_PayMoney();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
-	/**
 	 * Create the frame.
 	 */
-	public Success_PayMoney() {
+	public Success_PayMoney(JLabel TT_P,JTextField Txt_pay) {
+		int change = Integer.valueOf(Txt_pay.getText()) - Integer.valueOf(TT_P.getText());  
+		
 		setTitle("Order");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1080, 720);
@@ -51,9 +40,12 @@ public class Success_PayMoney extends JFrame {
 		lblNewLabel_1.setBounds(214, 92, 103, 37);
 		contentPane.add(lblNewLabel_1);
 
-		JTextArea textArea = new JTextArea();
-		textArea.setBounds(343, 68, 370, 92);
-		contentPane.add(textArea);
+		JLabel Txt_change = new JLabel();
+		Txt_change.setFont(new Font("Kanit", Font.PLAIN, 25));
+		Txt_change.setHorizontalAlignment(SwingConstants.CENTER);
+		Txt_change.setText(String.valueOf(change));
+		Txt_change.setBounds(343, 78, 370, 68);
+		contentPane.add(Txt_change);
 
 		JLabel lblNewLabel_1_1 = new JLabel("ชำระเงินเสร็จสิ้น");
 		lblNewLabel_1_1.setFont(new Font("Kanit", Font.PLAIN, 80));
@@ -61,6 +53,13 @@ public class Success_PayMoney extends JFrame {
 		contentPane.add(lblNewLabel_1_1);
 
 		JButton btnNewButton = new JButton("หน้าแรก");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Menu me = new Menu();
+				me.Menuframe.setVisible(true);
+				dispose();
+			}
+		});
 		btnNewButton.setFont(new Font("Kanit", Font.PLAIN, 30));
 		btnNewButton.setBounds(407, 597, 236, 76);
 		contentPane.add(btnNewButton);
