@@ -32,11 +32,10 @@ public class Login {
 
 	public Login() {
 		frmTextshop = new JFrame();
-		frmTextshop.setIconImage(Toolkit.getDefaultToolkit().getImage(Login.class.getResource("/resources/abc.png")));
 		frmTextshop.setResizable(false);
 		frmTextshop.setBackground(new Color(240, 240, 240));
 		frmTextshop.getContentPane().setBackground(new Color(248, 209, 224));
-		frmTextshop.setTitle("TextShop");
+		frmTextshop.setTitle("GonHin Cafe");
 		frmTextshop.setBounds(100, 100, 1080, 720);
 		frmTextshop.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmTextshop.getContentPane().setLayout(null);

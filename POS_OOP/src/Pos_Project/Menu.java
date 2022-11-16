@@ -78,7 +78,6 @@ public class Menu extends JFrame {
 
 	private void initialize() {
 
-		int[] count = new int[18];
 
 		JPanel panel_Menu = new JPanel();
 		panel_Menu.setBounds(23, 33, 675, 65);
@@ -561,9 +560,16 @@ public class Menu extends JFrame {
 		btnNewButton_1.setFont(new Font("Kanit", Font.PLAIN, 20));
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				if (Integer.valueOf(Total_PriceNumber.getText()) == 0){
+					Success_PayMoney Sp = new Success_PayMoney();
+					Sp.setVisible(true);
+					Menuframe.dispose();
+				}
+				else {
 				Check_total_page TotalPage = new Check_total_page(Total_PriceNumber);
 				TotalPage.Total_Frame.setVisible(true);
 				Menuframe.setVisible(false);
+				}
 
 			}
 		});
@@ -654,11 +660,13 @@ public class Menu extends JFrame {
 				DefaultTableModel dt = (DefaultTableModel) table.getModel();
 				int rw = table.getSelectedRow();
 				if (rw == -1) {
-
 					JOptionPane.showMessageDialog(null, "Please select a product to delete before pressing the button.",
 							"WARNING", JOptionPane.WARNING_MESSAGE);
 				} else {
 					dt.removeRow(rw);
+					for (int i = 0; i<count.length;i++) {
+						count[i] = 0;
+					}
 					cal();
 				}
 			}
@@ -703,5 +711,6 @@ public class Menu extends JFrame {
 	private JLabel TextLate;
 	private JLabel TextMocha;
 	private JLabel TextBlackTea;
+	private int[] count = new int[18];
 }
 
