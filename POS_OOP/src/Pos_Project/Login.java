@@ -23,7 +23,6 @@ import java.awt.Toolkit;
 public class Login {
 
 	protected JFrame frmTextshop;
-	private ImageIcon imgIcon;
 	private JTextField textFieldUser;
 	private JLabel Label_Pass;
 	private JPasswordField textFieldPass;
@@ -31,23 +30,7 @@ public class Login {
 	private String admin = "admin";
 	private String password = "admin123";
 
-	/**
-	 * Launch the application.
-	 */
-	
-
-	/**
-	 * Create the application.
-	 */
 	public Login() {
-		initialize();
-		
-	}
-
-	/**
-	 * Initialize the contents of the frame.
-	 */
-	private void initialize() {
 		frmTextshop = new JFrame();
 		frmTextshop.setIconImage(Toolkit.getDefaultToolkit().getImage(Login.class.getResource("/resources/abc.png")));
 		frmTextshop.setResizable(false);
@@ -57,6 +40,13 @@ public class Login {
 		frmTextshop.setBounds(100, 100, 1080, 720);
 		frmTextshop.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmTextshop.getContentPane().setLayout(null);
+		
+		initialize();
+		
+		
+	}
+
+	private void initialize() {
 		
 		JLabel Label_Logo = new JLabel("");
 		Label_Logo.setIcon(new ImageIcon(Login.class.getResource("/resources/gonhintest2.jpg")));
@@ -120,8 +110,8 @@ public class Login {
 		textFieldPass.addKeyListener(new KeyAdapter() {
 			@Override
 			public void keyPressed(KeyEvent e) {
-				if (e.getKeyCode() == KeyEvent.VK_ENTER) {
-					if (textFieldUser.getText().equals(admin) && textFieldPass.getText().equals(password)) {
+				if (e.getKeyCode() == KeyEvent.VK_ENTER) { //กด ปุ่ม enter
+					if (textFieldUser.getText().equals(admin) && textFieldPass.getText().equals(password)) { //ตรวจสอบว่า ไอดีกับรหัสผ่านถูกหรือไม่
 						JLabel messageDone = new JLabel("Success");
 						JOptionPane.showMessageDialog(null, messageDone,"Alert",JOptionPane.WARNING_MESSAGE);
 						Menu page_menu = new Menu();
@@ -129,7 +119,7 @@ public class Login {
 						frmTextshop.dispose();
 						
 					}
-					else if (textFieldUser.getText().isEmpty() || textFieldPass.getText().isEmpty()){
+					else if (textFieldUser.getText().isEmpty() || textFieldPass.getText().isEmpty()){ //ตรวจสอบว่าหลังจากกดปุ่มนั้นมีช่องไอดีหรือรหัสผ่านว่างหรือไม่
 						JLabel messageFail = new JLabel("Please input user and password");
 						JOptionPane.showMessageDialog(null,messageFail,"Error",JOptionPane.ERROR_MESSAGE);
 					
@@ -149,7 +139,7 @@ public class Login {
 		BEnter.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				if (textFieldUser.getText().equals(admin) && textFieldPass.getText().equals(password)) {
+				if (textFieldUser.getText().equals(admin) && textFieldPass.getText().equals(password)) { //ตรวจสอบว่า ไอดีกับรหัสผ่านถูกหรือไม่
 					JLabel messageDone = new JLabel("Success");
 					JOptionPane.showMessageDialog(null, messageDone,"Alert",JOptionPane.WARNING_MESSAGE);
 					Menu page_menu = new Menu();
@@ -157,7 +147,7 @@ public class Login {
 					frmTextshop.dispose();
 					
 				}
-				else if (textFieldUser.getText().isEmpty() || textFieldPass.getText().isEmpty()){
+				else if (textFieldUser.getText().isEmpty() || textFieldPass.getText().isEmpty()){ //ตรวจสอบว่าหลังจากกดปุ่มนั้นมีช่องไอดีหรือรหัสผ่านว่างหรือไม่
 					JLabel messageFail = new JLabel("Please input user and password");
 					JOptionPane.showMessageDialog(null,messageFail,"Error",JOptionPane.ERROR_MESSAGE);
 				
