@@ -25,8 +25,7 @@ import javax.swing.ImageIcon;
 
 public class Menu extends JFrame {
 
-
-	public void addtable(String Pd, int qty, int price) {
+	public void addtable(int ID, String Pd, int qty, int price) {
 		DefaultTableModel dt = (DefaultTableModel) table.getModel();
 
 		double totPrice = price * Double.valueOf(qty);
@@ -34,13 +33,13 @@ public class Menu extends JFrame {
 		TotalPrice = df.format(totPrice);
 
 		for (int row = 0; row < table.getRowCount(); row++) {
-			if (Pd == table.getValueAt(row, 0)) {
+			if (Pd == table.getValueAt(row, 1)) {
 				dt.removeRow(table.convertRowIndexToModel(row));
 			}
 		}
 
 		Vector v = new Vector();
-
+		v.add(ID);
 		v.add(Pd);
 		v.add(qty);
 		v.add(TotalPrice);
@@ -57,7 +56,7 @@ public class Menu extends JFrame {
 
 		for (int i = 0; i < numOfRow; i++) {
 
-			double value = Double.valueOf(table.getValueAt(i, 2).toString());
+			double value = Double.valueOf(table.getValueAt(i, 3).toString());
 
 			tot += value;
 
@@ -73,11 +72,9 @@ public class Menu extends JFrame {
 		panel_SubMenu.add(panel);
 		panel_SubMenu.repaint();
 		panel_SubMenu.revalidate();
-
 	}
 
 	private void initialize() {
-
 
 		JPanel panel_Menu = new JPanel();
 		panel_Menu.setBounds(23, 33, 675, 65);
@@ -124,12 +121,12 @@ public class Menu extends JFrame {
 
 				},
 				new String[] {
-						"Product name", "Quantity", "price"
+						"ID", "Product name", "Quantity", "price"
 				}));
 		scrollPane.setViewportView(table);
 
-		table.getColumnModel().getColumn(0).setPreferredWidth(200);
-		table.getColumnModel().getColumn(1).setPreferredWidth(50);
+		table.getColumnModel().getColumn(1).setPreferredWidth(200);
+		table.getColumnModel().getColumn(2).setPreferredWidth(50);
 
 		panel_SubMenu = new JLayeredPane();
 		panel_SubMenu.setBackground(new Color(255, 255, 255));
@@ -162,7 +159,7 @@ public class Menu extends JFrame {
 				int Acount = count[0];
 				++Acount;
 				++count[0];
-				addtable(TextMoji_choc.getText(), Acount, 20);
+				addtable(1, TextMoji_choc.getText(), Acount, 20);
 				cal();
 
 			}
@@ -181,7 +178,7 @@ public class Menu extends JFrame {
 				int Acount = count[1];
 				++Acount;
 				++count[1];
-				addtable(TextPudding_choc.getText(), Acount, 20);
+				addtable(2, TextPudding_choc.getText(), Acount, 20);
 				cal();
 			}
 		});
@@ -201,7 +198,7 @@ public class Menu extends JFrame {
 				int Acount = count[2];
 				++Acount;
 				++count[2];
-				addtable(TextPudding_milk.getText(), Acount, 35);
+				addtable(3, TextPudding_milk.getText(), Acount, 35);
 				cal();
 			}
 		});
@@ -223,7 +220,7 @@ public class Menu extends JFrame {
 				int Acount = count[3];
 				++Acount;
 				++count[3];
-				addtable(TextMoji_GreenTea.getText(), Acount, 20);
+				addtable(4, TextMoji_GreenTea.getText(), Acount, 20);
 				cal();
 			}
 		});
@@ -246,7 +243,7 @@ public class Menu extends JFrame {
 				int Acount = count[4];
 				++Acount;
 				++count[4];
-				addtable(TextCroissant.getText(), Acount, 20);
+				addtable(5, TextCroissant.getText(), Acount, 20);
 				cal();
 			}
 		});
@@ -267,7 +264,7 @@ public class Menu extends JFrame {
 				int Acount = count[5];
 				++Acount;
 				++count[5];
-				addtable(TextBreadGalic.getText(), Acount, 20);
+				addtable(6, TextBreadGalic.getText(), Acount, 20);
 				cal();
 			}
 		});
@@ -276,7 +273,7 @@ public class Menu extends JFrame {
 		btnBreadGalic.setBounds(459, 279, 170, 220);
 		Choos_Snack.add(btnBreadGalic);
 
-		//ชา
+		// ชา
 
 		JPanel Choos_Cha = new JPanel();
 		Choos_Cha.setBounds(0, 0, 675, 531);
@@ -295,7 +292,7 @@ public class Menu extends JFrame {
 				int Acount = count[6];
 				++Acount;
 				++count[6];
-				addtable(TextMilkTea.getText(), Acount, 35);
+				addtable(7, TextMilkTea.getText(), Acount, 35);
 				cal();
 			}
 		});
@@ -317,7 +314,7 @@ public class Menu extends JFrame {
 				int Acount = count[7];
 				++Acount;
 				++count[7];
-				addtable(TextGreenTea.getText(), Acount, 35);
+				addtable(8, TextGreenTea.getText(), Acount, 35);
 				cal();
 			}
 		});
@@ -339,7 +336,7 @@ public class Menu extends JFrame {
 				int Acount = count[8];
 				++Acount;
 				++count[8];
-				addtable(TextLimeTea.getText(), Acount, 35);
+				addtable(9, TextLimeTea.getText(), Acount, 35);
 				cal();
 			}
 		});
@@ -361,7 +358,7 @@ public class Menu extends JFrame {
 				int Acount = count[9];
 				++Acount;
 				++count[9];
-				addtable(TextColdTea.getText(), Acount, 35);
+				addtable(10, TextColdTea.getText(), Acount, 35);
 				cal();
 			}
 		});
@@ -383,7 +380,7 @@ public class Menu extends JFrame {
 				int Acount = count[10];
 				++Acount;
 				++count[10];
-				addtable(TextColdMilk.getText(), Acount, 35);
+				addtable(11, TextColdMilk.getText(), Acount, 35);
 				cal();
 			}
 		});
@@ -405,7 +402,7 @@ public class Menu extends JFrame {
 				int Acount = count[11];
 				++Acount;
 				++count[11];
-				addtable(TextCocho.getText(), Acount, 35);
+				addtable(12, TextCocho.getText(), Acount, 35);
 				cal();
 			}
 		});
@@ -415,7 +412,7 @@ public class Menu extends JFrame {
 		btnCocho.setBounds(459, 279, 170, 220);
 		Choos_Cha.add(btnCocho);
 
-		//กาแฟ
+		// กาแฟ
 
 		JPanel Choos_cafe = new JPanel();
 		Choos_cafe.setBounds(0, 0, 675, 531);
@@ -434,7 +431,7 @@ public class Menu extends JFrame {
 				int Acount = count[12];
 				++Acount;
 				++count[12];
-				addtable(TextAmericano.getText(), Acount, 35);
+				addtable(13, TextAmericano.getText(), Acount, 35);
 				cal();
 			}
 		});
@@ -456,7 +453,7 @@ public class Menu extends JFrame {
 				int Acount = count[13];
 				++Acount;
 				++count[13];
-				addtable(TextCapucino.getText(), Acount, 35);
+				addtable(14, TextCapucino.getText(), Acount, 35);
 				cal();
 			}
 		});
@@ -478,7 +475,7 @@ public class Menu extends JFrame {
 				int Acount = count[14];
 				++Acount;
 				++count[14];
-				addtable(TextEspresso.getText(), Acount, 35);
+				addtable(15, TextEspresso.getText(), Acount, 35);
 				cal();
 			}
 		});
@@ -500,7 +497,7 @@ public class Menu extends JFrame {
 				int Acount = count[15];
 				++Acount;
 				++count[15];
-				addtable(TextLate.getText(), Acount, 35);
+				addtable(16, TextLate.getText(), Acount, 35);
 				cal();
 			}
 		});
@@ -522,7 +519,7 @@ public class Menu extends JFrame {
 				int Acount = count[16];
 				++Acount;
 				++count[16];
-				addtable(TextMocha.getText(), Acount, 35);
+				addtable(17, TextMocha.getText(), Acount, 35);
 				cal();
 			}
 		});
@@ -544,7 +541,7 @@ public class Menu extends JFrame {
 				int Acount = count[17];
 				++Acount;
 				++count[17];
-				addtable(TextBlackTea.getText(), Acount, 35);
+				addtable(18, TextBlackTea.getText(), Acount, 35);
 				cal();
 			}
 		});
@@ -560,15 +557,14 @@ public class Menu extends JFrame {
 		btnNewButton_1.setFont(new Font("Kanit", Font.PLAIN, 20));
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (Integer.valueOf(Total_PriceNumber.getText()) == 0){
+				if (Integer.valueOf(Total_PriceNumber.getText()) == 0) {
 					Success_PayMoney Sp = new Success_PayMoney();
 					Sp.setVisible(true);
 					Menuframe.dispose();
-				}
-				else {
-				Check_total_page TotalPage = new Check_total_page(Total_PriceNumber);
-				TotalPage.Total_Frame.setVisible(true);
-				Menuframe.setVisible(false);
+				} else {
+					Check_total_page TotalPage = new Check_total_page(Total_PriceNumber);
+					TotalPage.Total_Frame.setVisible(true);
+					Menuframe.setVisible(false);
 				}
 
 			}
@@ -663,10 +659,84 @@ public class Menu extends JFrame {
 					JOptionPane.showMessageDialog(null, "Please select a product to delete before pressing the button.",
 							"WARNING", JOptionPane.WARNING_MESSAGE);
 				} else {
+					String r = dt.getValueAt(table.getSelectedRow(), 0).toString();
 					dt.removeRow(rw);
-					for (int i = 0; i<count.length;i++) {
-						count[i] = 0;
+					switch (r) {
+						case "1":
+							count[0] = 0;
+							break;
+
+						case "2":
+							count[1] = 0;
+							break;
+
+						case "3":
+							count[2] = 0;
+							break;
+
+						case "4":
+							count[3] = 0;
+							break;
+
+						case "5":
+							count[4] = 0;
+							break;
+
+						case "6":
+							count[5] = 0;
+							break;
+
+						case "7":
+							count[6] = 0;
+							break;
+
+						case "8":
+							count[7] = 0;
+							break;
+
+						case "9":
+							count[8] = 0;
+							break;
+
+						case "10":
+							count[9] = 0;
+							break;
+
+						case "11":
+							count[10] = 0;
+							break;
+
+						case "12":
+							count[11] = 0;
+							break;
+
+						case "13":
+							count[12] = 0;
+							break;
+
+						case "14":
+							count[13] = 0;
+							break;
+
+						case "15":
+							count[14] = 0;
+							break;
+
+						case "16":
+							count[15] = 0;
+							break;
+
+						case "17":
+							count[16] = 0;
+							break;
+
+						case "18":
+							count[17] = 0;
+							break;
+						default:
+							break;
 					}
+
 					cal();
 				}
 			}
@@ -713,4 +783,3 @@ public class Menu extends JFrame {
 	private JLabel TextBlackTea;
 	private int[] count = new int[18];
 }
-
