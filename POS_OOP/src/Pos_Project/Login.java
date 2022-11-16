@@ -18,7 +18,6 @@ import java.awt.event.MouseEvent;
 import java.awt.Cursor;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
-import java.awt.Toolkit;
 
 public class Login {
 
