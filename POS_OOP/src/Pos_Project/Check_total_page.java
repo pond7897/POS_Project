@@ -1,5 +1,7 @@
 package Pos_Project;
 
+import java.awt.EventQueue;
+
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
@@ -79,7 +81,6 @@ public class Check_total_page extends JFrame {
 						
 					}
 					
-					
 					@Override
 					public void keyReleased(KeyEvent e) {
 						if(Txt_Money.getText().isEmpty()) {
@@ -101,7 +102,7 @@ public class Check_total_page extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				Txt_Money.setEnabled(true);
 				Txt_Money.setEditable(true);
-				btnNewButton_2.setEnabled(false);
+				//btnNewButton_2.setEnabled(false);
 			}
 		});
 		Total_Frame.getContentPane().add(btnNewButton);
@@ -124,7 +125,7 @@ public class Check_total_page extends JFrame {
 			}
 		});
 		
-				JButton btnNewButton_2 = new JButton("Next");
+				btnNewButton_2 = new JButton("Next");
 				btnNewButton_2.setBounds(886, 613, 170, 60);
 				btnNewButton_2.setEnabled(false);
 				btnNewButton_2.addActionListener(new ActionListener() {
