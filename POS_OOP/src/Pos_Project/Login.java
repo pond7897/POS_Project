@@ -41,7 +41,6 @@ public class Login {
 		
 		initialize();
 		
-		
 	}
 
 	private void initialize() {

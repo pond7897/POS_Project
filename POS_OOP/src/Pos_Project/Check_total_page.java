@@ -36,8 +36,8 @@ public class Check_total_page extends JFrame {
 		
 		initialize(TT_P);
 
-		
 	}
+	
 	private void initialize(JLabel TT_P) {
 		
 		JLabel lblNewLabel_1 = new JLabel("ยอดรวม");

@@ -53,17 +53,21 @@ public class Menu extends JFrame {
 
 		int numOfRow = table.getRowCount();
 		int tot = 0;
+		int tot_piece = 0;
 
 		for (int i = 0; i < numOfRow; i++) {
 
 			double value = Double.valueOf(table.getValueAt(i, 3).toString());
+			double piece = Double.valueOf(table.getValueAt(i, 2).toString());
 
 			tot += value;
+			tot_piece += piece;
 
 		}
 
 		DecimalFormat df = new DecimalFormat("0");
 		Total_PriceNumber.setText(df.format(tot));
+		Total_PieceNumber.setText(df.format(tot_piece));
 
 	}
 
@@ -102,6 +106,7 @@ public class Menu extends JFrame {
 		lblNewLabel_2.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel_2.setBounds(430, 0, 245, 65);
 		panel_Menu.add(lblNewLabel_2);
+		
 
 		JPanel panel_CheckMenu = new JPanel();
 		panel_CheckMenu.setBackground(new Color(255, 255, 255));
@@ -127,6 +132,7 @@ public class Menu extends JFrame {
 
 		table.getColumnModel().getColumn(1).setPreferredWidth(200);
 		table.getColumnModel().getColumn(2).setPreferredWidth(50);
+		table.setShowGrid(false);
 
 		panel_SubMenu = new JLayeredPane();
 		panel_SubMenu.setBackground(new Color(255, 255, 255));
@@ -164,7 +170,7 @@ public class Menu extends JFrame {
 
 			}
 		});
-
+		
 		TextPudding_choc = new JLabel("พุดดิ้งช็อคโกแลต");
 		TextPudding_choc.setHorizontalAlignment(SwingConstants.CENTER);
 		TextPudding_choc.setFont(new Font("Kanit", Font.PLAIN, 14));
@@ -202,8 +208,7 @@ public class Menu extends JFrame {
 				cal();
 			}
 		});
-		btnPudding_milk
-				.setIcon(new ImageIcon(Menu.class.getResource("/resources/image_item/Snack//Pudding_gold_milk.png")));
+		btnPudding_milk.setIcon(new ImageIcon(Menu.class.getResource("/resources/image_item/Snack//Pudding_gold_milk.png")));
 		btnPudding_milk.setFont(new Font("Kanit", Font.PLAIN, 14));
 		btnPudding_milk.setBounds(459, 30, 170, 220);
 		Choos_Snack.add(btnPudding_milk);
@@ -224,8 +229,7 @@ public class Menu extends JFrame {
 				cal();
 			}
 		});
-		btnMoji_GreenTea
-				.setIcon(new ImageIcon(Menu.class.getResource("/resources/image_item/Snack//Moji_GreenTea.png")));
+		btnMoji_GreenTea.setIcon(new ImageIcon(Menu.class.getResource("/resources/image_item/Snack//Moji_GreenTea.png")));
 
 		btnMoji_GreenTea.setFont(new Font("Kanit", Font.PLAIN, 14));
 		btnMoji_GreenTea.setBounds(41, 279, 170, 220);
@@ -581,14 +585,26 @@ public class Menu extends JFrame {
 		Total_PriceNumber.setText("0");
 		Total_PriceNumber.setFont(new Font("Kanit", Font.PLAIN, 20));
 		Total_PriceNumber.setHorizontalAlignment(SwingConstants.LEFT);
-		Total_PriceNumber.setBounds(122, 0, 226, 39);
+		Total_PriceNumber.setBounds(262, 0, 86, 39);
 		panel.add(Total_PriceNumber);
 
 		JLabel Total_Price_1 = new JLabel(" ราคารวม :");
 		Total_Price_1.setHorizontalAlignment(SwingConstants.LEFT);
 		Total_Price_1.setFont(new Font("Kanit", Font.PLAIN, 20));
-		Total_Price_1.setBounds(0, 0, 114, 39);
+		Total_Price_1.setBounds(152, 0, 114, 39);
 		panel.add(Total_Price_1);
+		
+		JLabel Total_Piece = new JLabel("รายการซื้อ :");
+		Total_Piece.setHorizontalAlignment(SwingConstants.LEFT);
+		Total_Piece.setFont(new Font("Kanit", Font.PLAIN, 20));
+		Total_Piece.setBounds(0, 0, 114, 39);
+		panel.add(Total_Piece);
+		
+		Total_PieceNumber = new JLabel("0");
+		Total_PieceNumber.setHorizontalAlignment(SwingConstants.LEFT);
+		Total_PieceNumber.setFont(new Font("Kanit", Font.PLAIN, 20));
+		Total_PieceNumber.setBounds(114, 0, 42, 39);
+		panel.add(Total_PieceNumber);
 
 		lblNewLabel.addMouseListener(new MouseAdapter() {
 			@Override
@@ -781,5 +797,6 @@ public class Menu extends JFrame {
 	private JLabel TextLate;
 	private JLabel TextMocha;
 	private JLabel TextBlackTea;
+	private JLabel Total_PieceNumber;
 	private int[] count = new int[18];
 }
