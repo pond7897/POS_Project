@@ -17,6 +17,7 @@ import java.awt.Cursor;
 import javax.swing.JLayeredPane;
 import javax.swing.border.LineBorder;
 import javax.swing.JTable;
+import javax.swing.JTextArea;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.JScrollPane;
 import java.awt.event.ActionListener;
@@ -77,6 +78,8 @@ public class Menu extends JFrame {
 		panel_SubMenu.repaint();
 		panel_SubMenu.revalidate();
 	}
+	
+
 
 	private void initialize() {
 
@@ -115,10 +118,12 @@ public class Menu extends JFrame {
 		panel_CheckMenu.setLayout(null);
 
 		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setBackground(new Color(240, 240, 240));
 		scrollPane.setBounds(0, 0, 348, 433);
 		panel_CheckMenu.add(scrollPane);
 
 		table = new JTable();
+		table.setBackground(new Color(240, 240, 240));
 		table.setRowMargin(0);
 		table.setFont(new Font("Kanit", Font.PLAIN, 15));
 		table.setModel(new DefaultTableModel(
@@ -566,7 +571,7 @@ public class Menu extends JFrame {
 					Sp.setVisible(true);
 					Menuframe.dispose();
 				} else {
-					Check_total_page TotalPage = new Check_total_page(Total_PriceNumber);
+					Check_total_page TotalPage = new Check_total_page(Total_PriceNumber,table);
 					TotalPage.Total_Frame.setVisible(true);
 					Menuframe.setVisible(false);
 				}
@@ -767,6 +772,7 @@ public class Menu extends JFrame {
 		Menuframe.getContentPane().add(btnDeleteItem);
 
 		initialize();
+		
 	}
 
 	public static void main(String[] args) {
@@ -777,7 +783,8 @@ public class Menu extends JFrame {
 	public JLabel Total_PriceNumber;
 	protected JFrame Menuframe;
 	protected JLayeredPane panel_SubMenu;
-	private JTable table;
+	protected JTextArea Bill; 
+	public JTable table;
 	private String TotalPrice;
 	private JLabel TextMoji_choc;
 	private JLabel TextPudding_choc;

@@ -15,6 +15,10 @@ import java.awt.event.ActionEvent;
 import javax.swing.SwingConstants;
 import java.awt.SystemColor;
 import java.awt.Color;
+import javax.swing.JScrollPane;
+import javax.swing.ImageIcon;
+import javax.swing.JTextArea;
+import javax.swing.JTable;
 
 public class Check_total_page extends JFrame {
 
@@ -23,45 +27,48 @@ public class Check_total_page extends JFrame {
 	public JLabel Total_PriceNumber;
 	private JTextField Txt_Money;
 	private JButton btnNewButton_2;
+	private JTextArea Bill;
+	private JTable table;
 
-	public Check_total_page(JLabel TT_P) {
+	public Check_total_page(JLabel TT_P, JTable table) {
 
 		Total_Frame = new JFrame();
 		Total_Frame.getContentPane().setBackground(new Color(248, 209, 224));
 		Total_Frame.setBackground(SystemColor.activeCaptionBorder);
-		Total_Frame.getContentPane().setLayout(null);
 		Total_Frame.setResizable(false);
 		Total_Frame.setBounds(100, 100, 1080, 720);
 		Total_Frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.table = table;
 		
-		initialize(TT_P);
+		initialize(TT_P,table);
 
 	}
 	
-	private void initialize(JLabel TT_P) {
+	private void initialize(JLabel TT_P, JTable table) {
+		Total_Frame.getContentPane().setLayout(null);
 		
 		JLabel lblNewLabel_1 = new JLabel("ยอดรวม");
-		lblNewLabel_1.setBounds(175, 93, 103, 37);
+		lblNewLabel_1.setBounds(635, 352, 176, 41);
 		lblNewLabel_1.setFont(new Font("Kanit", Font.PLAIN, 30));
 		Total_Frame.getContentPane().add(lblNewLabel_1);
 
 		JLabel TextTotal = new JLabel("0");
+		TextTotal.setBounds(769, 349, 287, 46);
 		TextTotal.setText(String.valueOf(TT_P.getText()));
 		TextTotal.setHorizontalAlignment(SwingConstants.CENTER);
 		TextTotal.setFont(new Font("Kanit", Font.PLAIN, 30));
-		TextTotal.setBounds(338, 88, 345, 42);
 		Total_Frame.getContentPane().add(TextTotal);
 
 		JLabel lblNewLabel_1_1 = new JLabel("ให้มา");
-		lblNewLabel_1_1.setBounds(175, 357, 88, 62);
+		lblNewLabel_1_1.setBounds(577, 507, 88, 62);
 		lblNewLabel_1_1.setFont(new Font("Kanit", Font.PLAIN, 30));
 		Total_Frame.getContentPane().add(lblNewLabel_1_1);
 
 		Txt_Money = new JTextField();
+		Txt_Money.setBounds(675, 519, 370, 50);
 		Txt_Money.setEnabled(false);
 		Txt_Money.setEditable(false);
 		Txt_Money.setFont(new Font("Kanit", Font.PLAIN, 30));
-		Txt_Money.setBounds(343, 357, 370, 50);
 		Total_Frame.getContentPane().add(Txt_Money);
 
 		Txt_Money.addKeyListener(new KeyAdapter() {
@@ -87,7 +94,7 @@ public class Check_total_page extends JFrame {
 		});
 
 		JButton btnNewButton = new JButton("เงินสด");
-		btnNewButton.setBounds(575, 216, 220, 60);
+		btnNewButton.setBounds(836, 418, 220, 60);
 		btnNewButton.setFont(new Font("Kanit", Font.PLAIN, 25));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -98,8 +105,8 @@ public class Check_total_page extends JFrame {
 		Total_Frame.getContentPane().add(btnNewButton);
 
 		JButton btnNewButton_1 = new JButton("เร็วๆนี้");
+		btnNewButton_1.setBounds(591, 418, 220, 60);
 		btnNewButton_1.setEnabled(false);
-		btnNewButton_1.setBounds(261, 216, 220, 60);
 		btnNewButton_1.setFont(new Font("Kanit", Font.PLAIN, 25));
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -108,7 +115,7 @@ public class Check_total_page extends JFrame {
 		Total_Frame.getContentPane().add(btnNewButton_1);
 
 		btnNewButton_2 = new JButton("ชำระเงิน");
-		btnNewButton_2.setBounds(446, 455, 170, 60);
+		btnNewButton_2.setBounds(875, 598, 170, 60);
 		btnNewButton_2.setEnabled(false);
 		btnNewButton_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -119,6 +126,19 @@ public class Check_total_page extends JFrame {
 		});
 		btnNewButton_2.setFont(new Font("Kanit", Font.PLAIN, 20));
 		Total_Frame.getContentPane().add(btnNewButton_2);
+		
+		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setBackground(new Color(255, 255, 255));
+		scrollPane.setBounds(23, 10, 517, 632);
+		scrollPane.setViewportView(table);
+		Total_Frame.getContentPane().add(scrollPane);
+		
+		
+		
+		JLabel lblNewLabel = new JLabel("");
+		lblNewLabel.setBounds(441, 18, 551, 324);
+		lblNewLabel.setIcon(new ImageIcon(Check_total_page.class.getResource("/resources/gonhintest2.jpg")));
+		Total_Frame.getContentPane().add(lblNewLabel);
 		
 	}
 }
